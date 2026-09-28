@@ -1,0 +1,44 @@
+Experiment 1 — Matrix operations & linear algebra with
+NumPy
+AIM:
+Introduce matrix operations used in ML: transpose, inverse, solve linearsystems, eigen
+decomposition
+ALGORITHM (brief):
+Direct use of numpy. Lina1g routines; relate to linear regression normal equations.PROGRAM (run in a Jupyter code cell):
+import numpy as np
+A = np.array(t[2.0, 1.0], [1.0, 3.011)
+b=np.array(l1.0, 2.0])
+print(IMatrix A:lnu, A)
+print("'\nTranspose A^r: In", A.I)
+print ("\nInverse A^-1: 1n",op.linalg.inv(A))
+eigvals, eigvecs = np. linalg.eig(A)
+print("InEigenvalues:", np.round(eigvals, 4))
+x= np.linalg.solve (A, b)
+print (Insolve A x r b - x: ", np. roundIx, 2）
+DETAILED EXPLANATION
+1. import numpy as mp —load NumPy for arays and linear algebra
+2. A= np.array...) —define a 2x2 matrix A.
+3. b = np.arrayl...) —define vector b for solving A x = b.
+4. print("Matrix A:", A) —show matrix for reference.
+5. A..—compute transpose (rows - columns)
+6. pp.linalg.inv(A) — compute inverse of A(exists only if A is invertible).
+7. mp.linalg.eig(A)-—compute eigenvalues and eigenvectors; eigenvalues help understand variance directions (PCA).
+8. pp.lina1g.so1ve(A, b) — numerically solve linear system more stably than inv (A) .dot (b).
+SAMPLE OUTPUT:
+Matrix A:
+[[2. 1.]
+ [1. 3.]]
+Transpose A^T:
+[[2. 1.]
+ [1. 3.]]
+Inverse A^-1:
+[[ 0.6 -0.2]
+ [-0.2 0.4]]
+Eigenvalues: [3.3028 1.6972]
+Solve A x = b --> x: [0.2 0.6]
+RESULT:
+Students see concrete matrix computations and how to solve linear systems; relate 
+solve() to normal equations in linear regression.
+THEORY:
+Linear algebra (matrix inversion, eigen-decomposition) underpins PCA, linear models, 
+and many optimization problems. Conditioning/invertibility matters.
